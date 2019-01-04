@@ -13,10 +13,7 @@
  - Circular positioning
  - Visibility behavior
  - Dimension constraints
- - Chains
- - Virtual Helpers objects
- - Optimizer
-
+ 
 참고 
  - https://academy.realm.io/kr/posts/constraintlayout-it-can-do-what-now/
  - https://codelabs.developers.google.com/codelabs/constraint-layout/#1
