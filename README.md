@@ -11,7 +11,7 @@
  - Margins
  - Centering positioning
  - Circular positioning
- - Visibility behavior, 
+ - Visibility behavior
  - Dimension constraints
  - Chains
  - Virtual Helpers objects
