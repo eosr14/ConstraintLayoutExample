@@ -12,6 +12,7 @@
  - Centering positioning
  - Circular positioning
  - Visibility behavior
+ 
  - Dimension constraints
  - Chains
  - Virtual Helpers objects
