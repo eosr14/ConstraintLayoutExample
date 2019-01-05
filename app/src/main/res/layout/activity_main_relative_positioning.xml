@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- 가로 축 Example START -->
+    <Button
+        android:id="@+id/horizontal_buttonA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button A(가로)" />
+
+    <!-- Button B의 왼쪽편을 Button A의 오른쪽에 배치 -->
+    <Button
+        android:id="@+id/horizontal_buttonB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button B(가로)"
+        app:layout_constraintLeft_toRightOf="@id/horizontal_buttonA" />
+
+    <!-- Button C의 오른쪽편을 부모 뷰의 오른쪽에 배치 -->
+    <Button
+        android:id="@+id/horizontal_buttonC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button C(가로)"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_editor_absoluteY="40dp"/>
+    <!-- 가로 축 Example END -->
+
+    <!-- 세로 축 Example START -->
+    <Button
+        android:id="@+id/vertical_buttonA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button A(세로)"
+        app:layout_editor_absoluteY="120dp"/>
+
+    <!-- Button B의 상단을 Button A의 하단에 배치 -->
+    <Button
+        android:id="@+id/vertical_buttonB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button B(세로)"
+        app:layout_constraintTop_toBottomOf="@id/vertical_buttonA"/>
+
+    <!-- Button C의 하단을 부모뷰의 하단에 배치 -->
+    <Button
+        android:id="@+id/vertical_buttonC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button C(세로)"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- 세로 축 Example END -->
+
+    <!-- BaseLine Example START -->
+    <TextView
+        android:id="@+id/textA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text A"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_editor_absoluteX="20dp"
+        app:layout_editor_absoluteY="240dp" />
+
+    <!-- Button B의 왼쪽편을 text A의 오른쪽에 배치하며 textA의 텍스트 위치로 정렬합니다 -->
+    <Button
+        android:id="@+id/buttonB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button B(가로 & BaseLine)"
+        app:layout_constraintBaseline_toBaselineOf="@id/textA"
+        app:layout_constraintLeft_toRightOf="@id/textA"
+        app:layout_editor_absoluteY="240dp" />
+
+    <!-- BaseLine Example END -->
+
+</android.support.constraint.ConstraintLayout>
