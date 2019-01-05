@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Margin Example START -->
+    <Button
+        android:id="@+id/buttonA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button A" />
+
+    <!-- Button A의 오른쪽에 배치시키고 왼쪽 마진을 줍니다 -->
+    <Button
+        android:id="@+id/buttonB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:text="Button B"
+        app:layout_constraintLeft_toRightOf="@id/buttonA" />
+
+    <!-- Button C를 오른쪽 끝으로 배치시키고 오른쪽 마진을 줍니다 -->
+    <Button
+        android:id="@+id/buttonC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:text="Button C"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/buttonD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button D"
+        app:layout_editor_absoluteY="60dp" />
+    <!-- Margin Example END -->
+
+    <!-- Gone Margin Example START -->
+    <Button
+        android:id="@+id/buttonE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button E"
+        app:layout_editor_absoluteY="120dp"
+        android:visibility="gone"/>
+
+    <!-- Button E 가 숨김상태(GONE)일 경우 왼쪽 마진을 줍니다 -->
+    <Button
+        android:id="@+id/buttonF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button F"
+        app:layout_constraintLeft_toRightOf="@id/buttonE"
+        app:layout_goneMarginLeft="30dp"
+        app:layout_editor_absoluteY="120dp" />
+
+    <!-- Gone Margin Example END -->
+
+
+</android.support.constraint.ConstraintLayout>
