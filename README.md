@@ -28,7 +28,7 @@
   * layout_constraintEnd_toStartOf
   * layout_constraintEnd_toEndOf
 
-# 2-2 Margins
+# 2-2 Margins (여백)
 - 여백은 start, end, left, top, right, bottom 속성으로 줄 수 있습니다.
   * android:layout_marginStart
   * android:layout_marginEnd
@@ -45,9 +45,23 @@
   * layout_goneMarginRight
   * layout_goneMarginBottom
 
+# 2-3 Centering positioning (중앙 배치)
+- 상하좌우의 상대적 배치를 부모뷰로 설정을 하여 중앙정렬을 할 수 있습니다.
+ * app:layout_constraintBottom_toBottomOf="parent"
+ * app:layout_constraintLeft_toLeftOf="parent"
+ * app:layout_constraintRight_toRightOf="parent"
+ * app:layout_constraintTop_toTopOf="parent"
+
+- Bias 라는 속성을 통해 이미 정렬된 뷰를 한쪽으로 치우치게 설정할 수 있습니다.
+ * layout_constraintHorizontal_bias
+ * layout_constraintVertical_bias
+
+- 중앙으로 설정된 뷰를 왼쪽으로 30% 치우치게 설정하는 속성
+ * app:layout_constraintVertical_bias="0.3"
+ * app:layout_constraintLeft_toLeftOf="parent"
+ * app:layout_constraintRight_toRightOf="parent"
 
 
-# 2-3 Centering positioning
 # 2-4 Circular positioning
 # 2-5 Visibility behavior
 # 2-6 Dimension constraints
@@ -59,3 +73,4 @@
  - https://developer.android.com/reference/android/support/constraint/ConstraintLayout
  - https://academy.realm.io/kr/posts/constraintlayout-it-can-do-what-now/
  - https://www.charlezz.com/?p=669
+
