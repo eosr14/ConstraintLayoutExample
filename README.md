@@ -62,14 +62,23 @@
   * app:layout_constraintRight_toRightOf="parent" 
 
 
-# 2-4 Circular positioning
-# 2-5 Visibility behavior
+# 2-4 Circular positioning (원형 배치)
+- 한 뷰를 중점으로 다른 뷰의 중점을 배치할 수 있습니다. (각도와 거리값 필요)
+  * layout_constraintCircle : 기준으로 참조할 View의 id
+  * layout_constraintCircleRadius : 참조한 View와의 거리(반지름)
+  * layout_constraintCircleAngle : 0부터 360까지 참조한 뷰로부터의 각도
+
+
+# 2-5 Visibility Behavior (가시성에 따른 동작)
+ - ConstraintLayout 내에 연결된 뷰들간의 하나의 뷰가 숨겨지면(GONE) ConstraintLayout에서 특정 처리를 하도록 설정되어 있습니다. (Margins 기능의 GONE상태의 여백을 지정하는 기능)
+ - 레이아웃이 사이즈를 계산하고 그리기 위해서는 GONE 처리된 뷰는 기본적으로 하나의 점으로 취급되며, 기본적인 여백(Margins)은 0입니다.
+
 # 2-6 Dimension constraints
 # 2-7 Chains
 # 2-8 Virtual Helpers objects
 # 2-9 Optimizer
- 
-# 참고 
+
+# 참고
  - https://developer.android.com/reference/android/support/constraint/ConstraintLayout
  - https://academy.realm.io/kr/posts/constraintlayout-it-can-do-what-now/
  - https://www.charlezz.com/?p=669
