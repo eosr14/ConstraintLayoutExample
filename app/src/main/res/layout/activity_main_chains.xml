@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- CHAIN_SPREAD Example START -->
+    <Button
+        android:id="@+id/buttonA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button A"
+        app:layout_constraintHorizontal_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/buttonB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button B"
+        app:layout_constraintLeft_toRightOf="@id/buttonA" />
+
+    <Button
+        android:id="@+id/buttonC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button C"
+        app:layout_constraintLeft_toRightOf="@id/buttonB" />
+    <!-- CHAIN_SPREAD Example END -->
+
+    <!-- CHAIN_SPREAD Example START -->
+    <Button
+        android:id="@+id/buttonD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button D"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_editor_absoluteY="60dp" />
+
+    <Button
+        android:id="@+id/buttonE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button E"
+        app:layout_constraintLeft_toRightOf="@id/buttonD"
+        app:layout_editor_absoluteY="60dp" />
+
+    <Button
+        android:id="@+id/buttonF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button F"
+        app:layout_constraintLeft_toRightOf="@id/buttonE"
+        app:layout_editor_absoluteY="60dp" />
+    <!-- CHAIN_SPREAD Example END -->
+
+
+</android.support.constraint.ConstraintLayout>
