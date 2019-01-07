@@ -8,7 +8,7 @@
  - 다양한 비율과 해상도를 대응하기 위해서 여러벌의 레이아웃을 만들어야했지만 하나의 레이아웃으로 다양한 
 유스케이스에 대응이 되며, 단순한 계층구조로 이해하기 쉽고 퍼포먼스 향상에 도움이 된다고 합니다.
 
-# 2-1 Relative Positioning (상대적 배치) : [링크명](url)
+# 2-1 Relative Positioning (상대적 배치) : [링크](https://github.com/eosr14/ConstraintLayoutExample/blob/developer/app/src/main/res/layout/activity_main_relative_positioning.xml)
 - 상대적인 배치는 RelativeLayout과 흡사하며 뷰와 뷰간의 제약조건을 통해 위치를 결정할 수 있습니다.
 - 가로축 상의 배치는 left, right, start, end 속성으로 배치 가능
 - 세로축 상의 배치는 top, bottom 속성으로 배치 가능
@@ -28,7 +28,7 @@
   * layout_constraintEnd_toStartOf
   * layout_constraintEnd_toEndOf
 
-# 2-2 Margins (여백)
+# 2-2 Margins (여백) : [링크](https://github.com/eosr14/ConstraintLayoutExample/blob/developer/app/src/main/res/layout/activity_main_margin.xml)
 - 여백은 start, end, left, top, right, bottom 속성으로 줄 수 있습니다.
   * android:layout_marginStart
   * android:layout_marginEnd
@@ -45,7 +45,7 @@
   * layout_goneMarginRight
   * layout_goneMarginBottom
 
-# 2-3 Centering positioning (중앙 배치)
+# 2-3 Centering positioning (중앙 배치) : [링크](https://github.com/eosr14/ConstraintLayoutExample/blob/developer/app/src/main/res/layout/activity_main_centering_positioning.xml)
 - 상하좌우의 상대적 배치를 부모뷰로 설정을 하여 중앙정렬을 할 수 있습니다.
   * app:layout_constraintBottom_toBottomOf="parent"
   * app:layout_constraintLeft_toLeftOf="parent"
@@ -62,7 +62,7 @@
   * app:layout_constraintRight_toRightOf="parent" 
 
 
-# 2-4 Circular positioning (원형 배치)
+# 2-4 Circular positioning (원형 배치) : [링크](https://github.com/eosr14/ConstraintLayoutExample/blob/developer/app/src/main/res/layout/activity_main_circular_positioning.xml)
 - 한 뷰를 중점으로 다른 뷰의 중점을 배치할 수 있습니다. (각도와 거리값 필요)
   * layout_constraintCircle : 기준으로 참조할 View의 id
   * layout_constraintCircleRadius : 참조한 View와의 거리(반지름)
@@ -73,7 +73,7 @@
  - ConstraintLayout 내에 연결된 뷰들간의 하나의 뷰가 숨겨지면(GONE) ConstraintLayout에서 특정 처리를 하도록 설정되어 있습니다. (Margins 기능의 GONE상태의 여백을 지정하는 기능)
  - 레이아웃이 사이즈를 계산하고 그리기 위해서는 GONE 처리된 뷰는 기본적으로 하나의 점으로 취급되며, 기본적인 여백(Margins)은 0입니다.
 
-# 2-6 Dimension Constraints (크기 및 치수에 대한 제약 조건)
+# 2-6 Dimension Constraints (크기 및 치수에 대한 제약 조건) : [링크](https://github.com/eosr14/ConstraintLayoutExample/blob/developer/app/src/main/res/layout/activity_main_dimension_constraints.xml)
  - ConstraintLayout 내에서 최소값과 최대값을 정의 할 수도 있습니다.
  - 해당 속성을 사용하기 위해서는 ConstraintLayout 내에서 layout_width, layout_height에 대한 값이 WRAP_CONTENT로 지정이 되어 있어야 합니다.
    * android:minWidth 최소 가로 길이
@@ -101,7 +101,8 @@
  - 가로와 세로를 둘다 MATCH_CONSTRAINT로 적용하는 경우 가로세로의 비율을 결정하고 싶은데 세로기준 또는 가로기준으로 비율을 정하고 싶다면 “H” 또는 “W”를 붙이고 콤마(,)를 찍은 뒤 비율을 지정하면 됩니다.
    * app:layout_constraintDimensionRatio="H,16:9"
 
-# 2-7 Chains
+# 2-7 Chains(뷰끼리 연결하기) : [링크](https://github.com/eosr14/ConstraintLayoutExample/blob/developer/app/src/main/res/layout/activity_main_chains.xml)
+
 # 2-8 Virtual Helpers objects
 # 2-9 Optimizer
 
