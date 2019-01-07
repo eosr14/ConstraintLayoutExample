@@ -124,7 +124,7 @@ Guideline은 정적으로 수치를 입력하여 고정된 벽을 만들었다�
  - Barrier에 참조되어 있는 뷰가 GONE 상태가 되었을 때 참조를 끊을 수 있는 속성도 제공됩니다
    * app:barrierAllowsGoneWidgets="false"
  - Group : 여러 뷰들을 참조하며, 참조된 뷰들을 쉽게 Hide/Show 할 수 있는 클래스 입니다.
- - PlaceHolder :  이미 존재하는 뷰의 위치를 조정할 수 있는 가상 프로젝트입니다.
+ - PlaceHolder :  이미 존재하는 뷰의 위치를 조정할 수 있는 가상 프로젝트입니다. [링크](https://github.com/eosr14/ConstraintLayoutExample/blob/developer/app/src/main/java/constraintlayoutexample/eosr14/com/constraintlayoutexample/MainActivity.kt)
    * 어떠한 뷰의 id와 함께 setContent() 메소드를 이용하여 PlaceHolder에 적용할 수 있습니다.
    * PlaceHolder에 적용된 뷰는 효과적으로 해당 뷰(Content View)를 표현하게 되고, 원래 가지고 있던 뷰의 위치는 GONE 처럼 동작하게 됩니다.
 
