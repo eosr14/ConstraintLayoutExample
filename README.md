@@ -8,7 +8,7 @@
  - 다양한 비율과 해상도를 대응하기 위해서 여러벌의 레이아웃을 만들어야했지만 하나의 레이아웃으로 다양한 
 유스케이스에 대응이 되며, 단순한 계층구조로 이해하기 쉽고 퍼포먼스 향상에 도움이 된다고 합니다.
 
-# 2-1 Relative Positioning (상대적 배치) : (https://github.com/eosr14/ConstraintLayoutExample/blob/developer/app/src/main/res/layout/activity_main_relative_positioning.xml)
+# 2-1 Relative Positioning (상대적 배치) : [링크명](url)
 - 상대적인 배치는 RelativeLayout과 흡사하며 뷰와 뷰간의 제약조건을 통해 위치를 결정할 수 있습니다.
 - 가로축 상의 배치는 left, right, start, end 속성으로 배치 가능
 - 세로축 상의 배치는 top, bottom 속성으로 배치 가능
