@@ -6,54 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- minWidth/minHeight , maxWidth/maxHeight 임의로 설정후 가운데 정렬-->
     <Button
         android:id="@+id/buttonA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minHeight="150dp"
-        android:minWidth="150dp"
-        android:maxHeight="500dp"
         android:maxWidth="500dp"
+        android:maxHeight="500dp"
+        android:minWidth="150dp"
+        android:minHeight="150dp"
         android:text="Button A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- buttonB가 레이아웃 밖으로 밀려나지 않도록 app:layout_constrainedWidth 를 설정합니다. -->
     <TextView
         android:id="@+id/text1"
-        android:text="Hello Kotlin, ConstraintLayout Example.. Test Example"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxLines="1"
         android:ellipsize="end"
-        app:layout_constraintStart_toStartOf="parent"
+        android:maxLines="1"
+        android:text="Hello Kotlin, ConstraintLayout Example.. Test Example"
+        app:layout_constrainedWidth="true"
         app:layout_constraintEnd_toStartOf="@+id/buttonB"
-        app:layout_constrainedWidth="true" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/buttonB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="button1"
-        app:layout_constraintStart_toEndOf="@+id/text1"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:text="button B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text1" />
 
+    <!-- buttonC의 가로와 세로의 비율을 1:1로 설정 -->
     <Button
         android:id="@+id/buttonC"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:text="Button C"
-        app:layout_constraintDimensionRatio="1:1" />
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toRightOf="@id/buttonD"
+        app:layout_editor_absoluteY="60dp" />
 
+    <!-- buttonD를 세로기준으로 16:9로 비율 설정 -->
     <Button
         android:id="@+id/buttonD"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="Button D"
-        app:layout_constraintDimensionRatio="H,16:9"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintDimensionRatio="H,15:2"
+        app:layout_constraintTop_toBottomOf="@id/text1" />
 
 
 </android.support.constraint.ConstraintLayout>

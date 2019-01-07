@@ -6,54 +6,163 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- CHAIN_SPREAD Example START -->
+    <!-- 1. CHAIN_SPREAD Example START -->
+    <!-- Button1(Head)를 기준으로 뷰들의 여백을 같게 설정(CHAIN_SPREAD) -->
     <Button
-        android:id="@+id/buttonA"
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button A"
-        app:layout_constraintHorizontal_chainStyle="spread" />
+        android:text="button 1"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/button2" />
 
     <Button
-        android:id="@+id/buttonB"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button B"
-        app:layout_constraintLeft_toRightOf="@id/buttonA" />
+        android:text="button 2"
+        app:layout_constraintLeft_toRightOf="@+id/button1"
+        app:layout_constraintRight_toLeftOf="@+id/button3" />
 
     <Button
-        android:id="@+id/buttonC"
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button C"
-        app:layout_constraintLeft_toRightOf="@id/buttonB" />
-    <!-- CHAIN_SPREAD Example END -->
+        android:text="Button 3"
+        app:layout_constraintLeft_toRightOf="@+id/button2"
+        app:layout_constraintRight_toRightOf="parent" />
+    <!-- 1. CHAIN_SPREAD Example END -->
 
-    <!-- CHAIN_SPREAD Example START -->
+    <!-- 2. CHAIN_SPREAD_INSIDE Example START -->
+    <!-- Button4(Head)를 기준으로 가장 외곽에 있는 뷰들은 부모 뷰와 여백이 없는 상태로 설정(CHAIN_SPREAD_INSIDE) -->
     <Button
-        android:id="@+id/buttonD"
+        android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button D"
+        android:text="button 4"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/button5"
         app:layout_editor_absoluteY="60dp" />
 
     <Button
-        android:id="@+id/buttonE"
+        android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button E"
-        app:layout_constraintLeft_toRightOf="@id/buttonD"
+        android:text="button 5"
+        app:layout_constraintLeft_toRightOf="@+id/button4"
+        app:layout_constraintRight_toLeftOf="@+id/button6"
         app:layout_editor_absoluteY="60dp" />
 
     <Button
-        android:id="@+id/buttonF"
+        android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button F"
-        app:layout_constraintLeft_toRightOf="@id/buttonE"
+        android:text="Button 6"
+        app:layout_constraintLeft_toRightOf="@+id/button5"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_editor_absoluteY="60dp" />
-    <!-- CHAIN_SPREAD Example END -->
+    <!-- 2. CHAIN_SPREAD_INSIDE Example END -->
+
+
+    <!-- 3. CHAIN_SPREAD(Weighted Chain) Example START -->
+    <!-- Button 7,8,9에 가중치를 설정하고, 여백을 같게 설정(CHAIN_SPREAD - Weighted Chain) -->
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="button 7"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/button8"
+        app:layout_editor_absoluteY="120dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="button 8"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toRightOf="@+id/button7"
+        app:layout_constraintRight_toLeftOf="@+id/button9"
+        app:layout_editor_absoluteY="120dp" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Button 9"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/button8"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_editor_absoluteY="120dp" />
+    <!-- 3. CHAIN_SPREAD(Weighted Chain) Example END -->
+
+    <!-- 4. CHAIN_PACKED Example START -->
+    <!-- Button 10(Head)을 기준으로 뷰들이 똘똘 뭉치게 되고, 부모뷰로부터의 여백을 같게 합니다. (CHAIN_PACKED) -->
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button 10"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/button11"
+        app:layout_editor_absoluteY="180dp" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button 11"
+        app:layout_constraintLeft_toRightOf="@+id/button10"
+        app:layout_constraintRight_toLeftOf="@+id/button12"
+        app:layout_editor_absoluteY="180dp" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button 12"
+        app:layout_constraintLeft_toRightOf="@+id/button11"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_editor_absoluteY="180dp" />
+    <!-- 4. CHAIN_PACKED Example END -->
+
+    <!-- 5. CHAIN_PACKED With Bias Example START -->
+    <!-- Button 10(Head)을 기준으로 뷰들이 똘똘 뭉치게 되고, 부모뷰로부터의 여백을 같게 하며
+         가로 기준으로 0.1(10%)로 치우치게 설정합니다. (CHAIN_PACKED With Bias) -->
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button 13"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/button14"
+        app:layout_editor_absoluteY="240dp" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button 14"
+        app:layout_constraintLeft_toRightOf="@+id/button13"
+        app:layout_constraintRight_toLeftOf="@+id/button15"
+        app:layout_editor_absoluteY="240dp" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button 15"
+        app:layout_constraintLeft_toRightOf="@+id/button14"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_editor_absoluteY="240dp" />
+    <!-- 5. CHAIN_PACKED With Bias Example END -->
 
 
 </android.support.constraint.ConstraintLayout>

@@ -20,16 +20,28 @@
     <!-- 중앙 정렬 Example END -->
 
     <!-- Bias Example START -->
+
+    <!-- Button B를 가로 기준으로 0.3(30%) 치우치게 설정 -->
     <Button
         android:id="@+id/buttonB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button B"
-        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
-    <!-- Bias Example END -->
 
+    <!-- Button C를 세로 기준으로 0.7(70%) 치우치게 설정 -->
+    <Button
+        android:id="@+id/buttonC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <!-- Bias Example END -->
 
 
 </android.support.constraint.ConstraintLayout>
