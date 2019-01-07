@@ -102,6 +102,13 @@
    * app:layout_constraintDimensionRatio="H,16:9"
 
 # 2-7 Chains(뷰끼리 연결하기) : [링크](https://github.com/eosr14/ConstraintLayoutExample/blob/developer/app/src/main/res/layout/activity_main_chains.xml)
+ - Chain 속성을 통해 연결을 할 때에는 가로 기준으로 가장 왼쪽에 있는 뷰, 세로 기준으로는 가장 상단에 있는 뷰가 기준(Head)이 됩니다.
+ - layout_constraintHorizontal_chianStyle 또는 layout_constraintVertical_chainStyle 속성을 통해 	연결된 뷰의 Head에만 설정하면 됩니다. 기본 Chain 스타일은 CHAIN_SPREAD 입니다.
+   * CHAIN_SPREAD : 뷰들을 골고루 펼쳐 여백을 같게 합니다(기본값)
+   * CHAIN_SPREAD에서의 Weighted chain은 만약 뷰의 길이가 0dp로 지정되어있다면 남은 공간을 수치만큼 비율적으로 나눠갖습니다.
+   * CHAIN_SPREAD_INSIDE : CHAIN_SPREAD와 비슷하지만 가장 외곽에 있는 뷰들은 부모 뷰와 여백이 없는 상태로 골고루 펼쳐집니다.
+   * CHAIN_PACKED : 뷰들이 똘똘 뭉치게 되고 부모뷰로부터의 여백을 같게 합니다. 여백을 조정하고 싶다면 bias조정을 통해 한쪽으로 치우치게 만들 수 있습니다.
+
 
 # 2-8 Virtual Helpers objects
 # 2-9 Optimizer
@@ -110,3 +117,4 @@
  - https://developer.android.com/reference/android/support/constraint/ConstraintLayout
  - https://academy.realm.io/kr/posts/constraintlayout-it-can-do-what-now/
  - https://www.charlezz.com/?p=669
+ - https://academy.realm.io/kr/posts/cool-constraintlayout-droidcon-boston-2017/
