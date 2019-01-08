@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- Margin Example START -->
+    <!-- 1. Margin START -->
     <Button
         android:id="@+id/buttonA"
         android:layout_width="wrap_content"
@@ -37,9 +37,9 @@
         android:layout_height="wrap_content"
         android:text="Button D"
         app:layout_editor_absoluteY="60dp" />
-    <!-- Margin Example END -->
+    <!-- 1. Margin END -->
 
-    <!-- Gone Margin Example START -->
+    <!-- 2. Gone Margin START -->
     <Button
         android:id="@+id/buttonE"
         android:layout_width="wrap_content"
@@ -57,8 +57,7 @@
         app:layout_constraintLeft_toRightOf="@id/buttonE"
         app:layout_goneMarginLeft="30dp"
         app:layout_editor_absoluteY="120dp" />
-
-    <!-- Gone Margin Example END -->
+    <!-- 2. Gone Margin END -->
 
 
 </android.support.constraint.ConstraintLayout>

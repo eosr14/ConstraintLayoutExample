@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- 원형 정렬 Example START -->
+    <!-- 1. 원형 정렬 START -->
     <Button
         android:id="@+id/buttonA"
         android:layout_width="wrap_content"
@@ -26,8 +26,7 @@
         app:layout_constraintCircle="@id/buttonA"
         app:layout_constraintCircleRadius="100dp"
         app:layout_constraintCircleAngle="45"/>
-
-    <!-- 원형 정렬 Example END -->
+    <!-- 1. 원형 정렬 END -->
 
 
 </android.support.constraint.ConstraintLayout>

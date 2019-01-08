@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- 1. CHAIN_SPREAD Example START -->
+    <!-- 1. CHAIN_SPREAD START -->
     <!-- Button1(Head)를 기준으로 뷰들의 여백을 같게 설정(CHAIN_SPREAD) -->
     <Button
         android:id="@+id/button1"
@@ -32,9 +32,9 @@
         android:text="Button 3"
         app:layout_constraintLeft_toRightOf="@+id/button2"
         app:layout_constraintRight_toRightOf="parent" />
-    <!-- 1. CHAIN_SPREAD Example END -->
+    <!-- 1. CHAIN_SPREAD END -->
 
-    <!-- 2. CHAIN_SPREAD_INSIDE Example START -->
+    <!-- 2. CHAIN_SPREAD_INSIDE START -->
     <!-- Button4(Head)를 기준으로 가장 외곽에 있는 뷰들은 부모 뷰와 여백이 없는 상태로 설정(CHAIN_SPREAD_INSIDE) -->
     <Button
         android:id="@+id/button4"
@@ -63,10 +63,10 @@
         app:layout_constraintLeft_toRightOf="@+id/button5"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_editor_absoluteY="60dp" />
-    <!-- 2. CHAIN_SPREAD_INSIDE Example END -->
+    <!-- 2. CHAIN_SPREAD_INSIDE END -->
 
 
-    <!-- 3. CHAIN_SPREAD(Weighted Chain) Example START -->
+    <!-- 3. CHAIN_SPREAD(Weighted Chain) START -->
     <!-- Button 7,8,9에 가중치를 설정하고, 여백을 같게 설정(CHAIN_SPREAD - Weighted Chain) -->
     <Button
         android:id="@+id/button7"
@@ -98,9 +98,9 @@
         app:layout_constraintLeft_toRightOf="@+id/button8"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_editor_absoluteY="120dp" />
-    <!-- 3. CHAIN_SPREAD(Weighted Chain) Example END -->
+    <!-- 3. CHAIN_SPREAD(Weighted Chain) END -->
 
-    <!-- 4. CHAIN_PACKED Example START -->
+    <!-- 4. CHAIN_PACKED START -->
     <!-- Button 10(Head)을 기준으로 뷰들이 똘똘 뭉치게 되고, 부모뷰로부터의 여백을 같게 합니다. (CHAIN_PACKED) -->
     <Button
         android:id="@+id/button10"
@@ -129,9 +129,9 @@
         app:layout_constraintLeft_toRightOf="@+id/button11"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_editor_absoluteY="180dp" />
-    <!-- 4. CHAIN_PACKED Example END -->
+    <!-- 4. CHAIN_PACKED END -->
 
-    <!-- 5. CHAIN_PACKED With Bias Example START -->
+    <!-- 5. CHAIN_PACKED With Bias START -->
     <!-- Button 10(Head)을 기준으로 뷰들이 똘똘 뭉치게 되고, 부모뷰로부터의 여백을 같게 하며
          가로 기준으로 0.1(10%)로 치우치게 설정합니다. (CHAIN_PACKED With Bias) -->
     <Button
@@ -162,7 +162,7 @@
         app:layout_constraintLeft_toRightOf="@+id/button14"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_editor_absoluteY="240dp" />
-    <!-- 5. CHAIN_PACKED With Bias Example END -->
+    <!-- 5. CHAIN_PACKED With Bias END -->
 
 
 </android.support.constraint.ConstraintLayout>

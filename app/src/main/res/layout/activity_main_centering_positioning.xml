@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- 중앙 정렬 Example START -->
+    <!-- 1. 중앙 정렬 START -->
     <Button
         android:id="@+id/buttonA"
         android:layout_width="wrap_content"
@@ -16,11 +16,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <!-- 1. 중앙 정렬 END -->
 
-    <!-- 중앙 정렬 Example END -->
-
-    <!-- Bias Example START -->
-
+    <!-- 2. Bias START -->
     <!-- Button B를 가로 기준으로 0.3(30%) 치우치게 설정 -->
     <Button
         android:id="@+id/buttonB"
@@ -40,8 +38,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.7" />
-
-    <!-- Bias Example END -->
+    <!-- 2. Bias END -->
 
 
 </android.support.constraint.ConstraintLayout>

@@ -109,9 +109,24 @@
    * CHAIN_SPREAD_INSIDE : CHAIN_SPREAD와 비슷하지만 가장 외곽에 있는 뷰들은 부모 뷰와 여백이 없는 상태로 골고루 펼쳐집니다.
    * CHAIN_PACKED : 뷰들이 똘똘 뭉치게 되고 부모뷰로부터의 여백을 같게 합니다. 여백을 조정하고 싶다면 bias조정을 통해 한쪽으로 치우치게 만들 수 있습니다.
 
-
-# 2-8 Virtual Helpers objects
-# 2-9 Optimizer
+# 2-8 Virtual Helpers objects(뷰의 배치를 돕는 가상 오브젝트) : [링크](https://github.com/eosr14/ConstraintLayoutExample/blob/developer/app/src/main/res/layout/activity_main_virtual_helpers_objects.xml)
+ - 뷰의 배치를 돕는 가상 오브젝트의 종류에는 Guidline, Barrier, Group, Placeholder가 있습니다.
+ - GuideLine : 뷰의 위치를 잡는데 도움을 주는 유틸리티 클래스로 기본 동작은 숨김 상태(GONE) 입니다. 
+orientation 속성을 통해 가로 및 세로로 배치할 수 있으며 기본적으로 사이즈가 0dp 입니다.
+   * layout_constraintGuide_begin : 좌측 또는 상단으로부터 고정된 거리값을 가지고 배치 됩니다.
+   * layout_constraintGuide_end : 우측 또는 하단으로부터 고정된 거리값을 가지고 배치 됩니다.
+   * layout_constraintGuide_percent : 0부터 1까지 float값을 넣어 전체 길이의 비례적으로 배치 됩니다.
+ - Barrier : 말 그대로 장벽을 만들어 그 이상의 뷰들이 넘어오지 못하도록 설정할 수 있습니다.
+Guideline은 정적으로 수치를 입력하여 고정된 벽을 만들었다면, Barrier는 어떤 뷰들을 기준으로 동적인 벽을 만들 수 있습니다.
+   * barrierDirection : barrier의 방향을 결정합니다. top, bottom, start, end, left, right가 해당됩니다.
+   * constraint_referenced_ids : 장벽의 기준점으로 참조할 뷰의 아이디를 복수개 참조 할 수 있습니다
+   * barrierAllowsGoneWidgets : 참조하고 있던 true 또는 false 값을 통해 참조하고 있던 뷰가 GONE될때의 동작을 지정합니다.
+ - Barrier에 참조되어 있는 뷰가 GONE 상태가 되었을 때 참조를 끊을 수 있는 속성도 제공됩니다
+   * app:barrierAllowsGoneWidgets="false"
+ - Group : 여러 뷰들을 참조하며, 참조된 뷰들을 쉽게 Hide/Show 할 수 있는 클래스 입니다.
+ - PlaceHolder :  이미 존재하는 뷰의 위치를 조정할 수 있는 가상 프로젝트입니다.
+   * 어떠한 뷰의 id와 함께 setContent() 메소드를 이용하여 PlaceHolder에 적용할 수 있습니다.
+   * PlaceHolder에 적용된 뷰는 효과적으로 해당 뷰(Content View)를 표현하게 되고, 원래 가지고 있던 뷰의 위치는 GONE 처럼 동작하게 됩니다.
 
 # 참고
  - https://developer.android.com/reference/android/support/constraint/ConstraintLayout
